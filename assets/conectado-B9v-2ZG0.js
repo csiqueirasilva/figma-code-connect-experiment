@@ -1,0 +1,5 @@
+import{j as e,L as c}from"./index-DpnAxheF.js";import{T as t}from"./TypographyP-CeK7FfoT.js";const a="/figma-code-connect-experiment/assets/code-connected-1-CfVHixe4.png",i="/figma-code-connect-experiment/assets/code-connected-2-CTbkjJMr.png";function s(o){const n={strong:"strong",...o.components};return e.jsxs(e.Fragment,{children:[e.jsx(t,{children:"Exemplo do código conectado com a versão no Figma."}),`
+`,e.jsx("div",{className:"mt-0",children:e.jsx("img",{src:a,alt:"Código Conectado"})}),`
+`,e.jsx("div",{className:"mt-0",children:e.jsx("img",{src:i,alt:"Componente no Figma"})}),`
+`,e.jsxs(t,{children:["Esse código na forma ",e.jsx(n.strong,{children:"básica"})," pode ser gerado a partir do Figma com a biblioteca de componentes. ",e.jsx(c,{to:"https://www.figma.com/code-connect-docs/react/",children:"Deve ser checada a documentação para ver como isso é feito"}),"."]}),`
+`,e.jsxs(t,{children:["Outro local de documentação importante é o ",e.jsx(c,{to:"https://github.com/figma/code-connect",children:"repositório no Github"}),"."]})]})}function m(o={}){const{wrapper:n}=o.components||{};return n?e.jsx(n,{...o,children:e.jsx(s,{...o})}):s(o)}export{m as default};
