@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "jsx": "preserve",
+      "moduleResolution": "Node",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "baseUrl": "./",
+      "paths": {
+        "@/*": ["src/*"],
+        "compositions": ["node_modules/sds/src/ui/compositions"],
+        "hooks": ["node_modules/sds/src/ui/hooks"],
+        "icons": ["node_modules/sds/src/ui/icons"],
+        "images": ["node_modules/sds/src/ui/images"],
+        "layout": ["node_modules/sds/src/ui/layout"],
+        "primitives": ["node_modules/sds/src/ui/primitives"],
+        "providers": ["node_modules/sds/src/ui/providers"],
+        "utils": ["node_modules/sds/src/ui/utils"]
+      }
+    },
+    "include": ["src", "**/*.mdx"],
+    "exclude": ["node_modules", "dist"]
+  }

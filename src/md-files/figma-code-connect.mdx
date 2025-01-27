@@ -1,0 +1,229 @@
+import TypographyP from '@/components/typography/TypographyP';
+import SubtitleMd from '@/components/typography/SubtitleMd';
+import InlineCode from '@/components/typography/TypographyInlineCode';
+import { Separator } from '@/components/ui/separator';
+import TypographyLink from '@/components/typography/TypographyLink';
+import CodeBlock from "@/components/CodeBlock";
+
+<TypographyP>As instruções abaixo foram retiradas do README do SDS. Serão feitas elas aqui com screenshots para facilitar o entendimento e reprodução.</TypographyP>
+
+<TypographyP>Os passos originais do repositório do SDS são:</TypographyP>
+
+<CodeBlock language="shell">{`1) Duplicate the Figma Community File
+2) Clone this repo
+3) Update urls in figma.config.json to point to your Figma file
+   Note: the file keys (eg. J0KLPKXiONDRssXD1AX9Oi) should be the only change in the urls unless you're creating new components, detaching and recreating.
+4) Create and set your Figma Auth Token
+5) At that point, npx figma connect publish should work and your new file should have Code Connect.`}
+</CodeBlock>
+
+<SubtitleMd>Passo 1</SubtitleMd>
+
+<TypographyP>Para o ```item 1```, simplesmente acessamos o <TypographyLink to="https://www.figma.com/community/file/1380235722331273046/simple-design-system" target='_blank'>link do arquivo de SDS no Figma</TypographyLink> e criamos uma cópia na nossa conta como na imagem abaixo.</TypographyP>
+
+<div className="mt-6">
+![Criar cópia do arquivo de design system do SDS](/images/figma-sds-copy.png)
+</div>
+
+<SubtitleMd>Passo 2</SubtitleMd>
+
+<TypographyP>Após isso, clonamos o <TypographyLink to="https://github.com/figma/sds" target='_blank'>repositório do SDS</TypographyLink> para concluir o ```item 2```.</TypographyP>
+
+<CodeBlock>git clone https://github.com/figma/sds</CodeBlock>
+
+<SubtitleMd>Passo 3</SubtitleMd>
+
+<TypographyP>Dentro do repositório SDS clonado, devemos substituir o ID do arquivo de Design System original pela cópia no arquivo **figma.config.json**. No exemplo, o original era **J0KLPKXiONDRssXD1AX9Oi** e foi sobreescrito por **HtE2Ja2xxQegkAIXrLQLGP** que é o ID da nossa cópia usada (abaixo demonstramos como obter essa informação).</TypographyP>
+
+<div className="mt-6">
+![Replace de J0KLPKXiONDRssXD1AX9Oi pelo id do seu arquivo cópia](/images/sds-step3-1.png)
+</div>
+
+<TypographyP>Para encontrar o ID do nosso Design System copiado, foram feitos os seguintes passos:</TypographyP>
+
+<TypographyP>Encontrar o arquivo de design system no figma:</TypographyP>
+
+<div className="mt-6">
+![Encontrar o arquivo de design system no figma](/images/sds-step3-2.png)
+</div>
+
+<TypographyP>Obter o ID pela URL:</TypographyP>
+
+<div className="mt-6">
+![Encontrar o arquivo de design system no figma](/images/sds-step3-3.png)
+</div>
+
+<TypographyP>*OBS: Existe um script no repositório do SDS que faz isso automaticamente, mas foi usado um replace simples.* </TypographyP>
+
+<SubtitleMd>Passo 4</SubtitleMd>
+
+<TypographyP>É necessária uma chave de API com a permissão do code connect. Atualmente essa chave está apenas disponível para contas no plano organization ou business.</TypographyP>
+
+<TypographyP>Essa chave deve ser gerada nas configurações de usuário:</TypographyP>
+
+<div className="mt-6">
+![Abrindo as configurações de usuário](/images/sds-step4-1.png)
+</div>
+
+<TypographyP>Indo na parte de segurança e clicando em generate new token:</TypographyP>
+
+<div className="mt-6">
+![Indo na parte de segurança e gerando o novo token](/images/sds-step4-2.png)
+</div>
+
+<TypographyP>Deve ser marcada a opção da geração do token com permissão de escrita no code connect:</TypographyP>
+
+<div className="mt-6">
+![Marcar a opção da geração do token com permissão de escrita no code connect](/images/sds-step4-3.png)
+</div>
+
+<SubtitleMd>Passo 5</SubtitleMd>
+
+<TypographyP>Agora podemos executar o comando de sincronização do repositório do SDS com o nosso arquivo de design system copiado dentro do figma.</TypographyP>
+
+<CodeBlock language="shell">{`npx figma connect publish --token <TOKEN DO FIGMA GERADO NO PASSO 4>`}</CodeBlock>
+
+<TypographyP>Como exemplo, tivemos a saída abaixo:</TypographyP>
+
+<CodeBlock language="shell">{`
+csiqueira@hawaiiland-linux:~/projects/sds$ npx figma connect publish --token <TOKEN DO FIGMA GERADO NO PASSO 4>
+(node:713693) [DEP0040] DeprecationWarning: The \`punycode\` module is deprecated. Please use a userland alternative instead.
+(Use \`node --trace-deprecation ...\` to show where the warning was created)
+Config file found, parsing /home/csiqueira/projects/sds using specified include globs
+/home/csiqueira/projects/sds/src/figma/primitives/Tooltip.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Textarea.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Text.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Tag.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Tab.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Switch.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Slider.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Select.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Search.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Radio.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Pagination.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Notification.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Navigation.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Menu.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Input.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/IconButton.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Dialog.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Checkbox.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Button.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Avatar.figma.tsx
+/home/csiqueira/projects/sds/src/figma/primitives/Accordion.figma.tsx
+/home/csiqueira/projects/sds/src/figma/compositions/Panels.figma.tsx
+/home/csiqueira/projects/sds/src/figma/compositions/Pages.figma.tsx
+/home/csiqueira/projects/sds/src/figma/compositions/Heroes.figma.tsx
+/home/csiqueira/projects/sds/src/figma/compositions/Headers.figma.tsx
+/home/csiqueira/projects/sds/src/figma/compositions/Forms.figma.tsx
+/home/csiqueira/projects/sds/src/figma/compositions/Footers.figma.tsx
+/home/csiqueira/projects/sds/src/figma/compositions/Cards.figma.tsx
+/home/csiqueira/projects/sds/src/figma/compositions/CardGrids.figma.tsx
+Validating Code Connect files...
+All Code Connect files are valid (3926ms)
+Uploading to Figma...
+
+A new version of the Figma CLI is available. v1.1.4 is currently installed, and the latest version available is v1.2.4.
+
+To update, run npm install @figma/code-connect@latest for React or HTML, or npm install -g @figma/code-connect@latest for other targets (or if you have Code Connect installed globally).
+Successfully uploaded to Figma, for React:
+-> Tooltip https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=315-32700
+-> Textarea(Has Label=false) https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762-3088
+-> TextareaField(Has Label=true) https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762-3088
+-> TextTitleHero https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2087-8491
+-> TextTitlePage https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2087-8490
+-> TextSubtitle https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2103-22298
+-> TextHeading https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2087-8488
+-> TextSubheading https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2103-22303
+-> Text https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2087-8487
+-> TextEmphasis https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2087-8485
+-> TextLink https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2087-8483
+-> TextStrong https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2087-8486
+-> TextSmall https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2087-8484
+-> TextCode https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2104-22325
+-> TextList https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=480-6149
+-> TextLinkList https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=322-9321
+-> TextListItem https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2077-11663
+-> TextListItem https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2153-7973
+-> TextPrice https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=1443-10386
+-> TextContentHeading https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2153-7834
+-> TextContentTitle https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2153-7838
+-> Tag https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=56-8830
+-> TagToggle https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=157-10316
+-> TagToggleGroup https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=157-10352
+-> Tab https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=3729-12963
+-> Tabs https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=3729-13362
+-> SwitchField https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:1902
+-> SliderField https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=589-17676
+-> Select(Has Label=false) https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2136-2336
+-> SelectField(Has Label=true) https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2136-2336
+-> Search https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2236-14989
+-> RadioField https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:1412
+-> RadioGroup https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=624-23642
+-> PaginationPage https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:890
+-> PaginationGap https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:868
+-> PaginationPrevious https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:880
+-> PaginationNext https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:870
+-> PaginationList https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:903
+-> Pagination https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:899
+-> Notification https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=124-8256
+-> Navigation https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2194-14984
+-> NavigationPill https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=7768-19970
+-> Navigation https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=524-503
+-> NavigationButton https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=515-5459
+-> Menu https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:720
+-> MenuHeading https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:760
+-> MenuShortcut https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:739
+-> MenuItem https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:743
+-> MenuHeader https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:728
+-> MenuSeparator https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:731
+-> Input(Has Label=false) https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2136-2263
+-> InputField(Has Label=true) https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2136-2263
+-> IconButton https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=11-11508
+-> Dialog https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762-696
+-> Dialog https://www.figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=192-31534
+-> CheckboxField https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:1441
+-> CheckboxGroup https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:1426
+-> Button https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:426
+-> Button https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=185-852
+-> ButtonGroup https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2072-9432
+-> AvatarGroup https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=56-15608
+-> Avatar https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=9762:1103
+-> AvatarBlock https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2010-15581
+-> Accordion https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=7753-4779
+-> AccordionItem https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=7753-4634
+-> Panel https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348-13474
+-> Panel https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348-15101
+-> Panel https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348-13470
+-> Panel https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348-15098
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:13173
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:15147
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:15133
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:13517
+-> Hero https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348-15896
+-> Hero https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348-15901
+-> Hero https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348-15919
+-> Hero https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348-15933
+-> Hero https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348-15970
+-> Header https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2287-22651
+-> HeaderAuth https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=18-9389
+-> FormBox https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=197:19740
+-> FormBox https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=197:19741
+-> FormBox https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=197:19742
+-> FormBox https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=197:19743
+-> FormBox https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=197:19744
+-> FormBox https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=197:23153
+-> Footer https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=321-11357
+-> Card https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2142-11380
+-> PricingCard https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=1444-11846
+-> ProductInfoCard https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=7753-4465
+-> ReviewCard https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2236-16106
+-> StatsCard https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=2236-15082
+-> TestimonialCard https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=7717-3946
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:13221
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:13347
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:13407
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:14431
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:14983
+-> Section https://figma.com/design/HtE2Ja2xxQegkAIXrLQLGP?node-id=348:15213
+`}</CodeBlock>
