@@ -6,6 +6,13 @@ import TypographyLink from '@/components/typography/TypographyLink';
 import CodeBlock from "@/components/CodeBlock";
 import Waitlist from "@/components/sds/Waitlist";
 
+import step1_1 from "@public/images/vscode-step1-1.png";
+import step1_2 from "@public/images/vscode-step1-2.png";
+import step1_3 from "@public/images/vscode-step1-3.png";
+import step1_4 from "@public/images/vscode-step1-4.png";
+import step1_5 from "@public/images/vscode-step1-5.png";
+import step1_6 from "@public/images/vscode-step1-6.png";
+
 <TypographyP>Após a configuração dos componentes conectados, podemos tentar obter a lista de componentes a serem programados no VSCode via <TypographyLink to="https://marketplace.visualstudio.com/items?itemName=figma.figma-vscode-extension" target="_blank">extensão do Figma</TypographyLink>.</TypographyP>
 
 <TypographyP>*OBS: Você deve se identificar na extensão do Figma com as mesmas credenciais que tem acesso ao arquivo de Design System.*</TypographyP>
@@ -13,37 +20,37 @@ import Waitlist from "@/components/sds/Waitlist";
 <TypographyP>Escolha o arquivo do Simple Design System conectado (SDS).</TypographyP>
 
 <div className="mt-6">
-![Abrindo o arquivo do SDS na extensão do Figma](/images/vscode-step1-1.png)
+    <img src={step1_1} alt="Abrindo o arquivo do SDS na extensão do Figma" />
 </div>
 
 <TypographyP>Vamos observar que não há itens prontos para desenvolvimento.</TypographyP>
 
 <div className="mt-6">
-![Sem itens prontos para desenvolvimento](/images/vscode-step1-2.png)
+    <img src={step1_2} alt="Sem itens prontos para desenvolvimento" />
 </div>
 
 <TypographyP>Vamos escolher um exemplo para programar. Nesse fluxo iremos selecionar o *Examples/Waitlist* dentro de *Examples* do arquivo de Design System. Idealmente, um sistema teria seu próprio arquivo do Figma, linkado com os componentes do Design System.</TypographyP>
 
 <div className="mt-6">
-![Página escolhida para desenvolvimento](/images/vscode-step1-3.png)
+    <img src={step1_3} alt="Página escolhida para desenvolvimento" />
 </div>
 
 <TypographyP>Vamos marcar a página pronta para desenvolvimento no canto superior direito.</TypographyP>
 
 <div className="mt-6">
-![Vamos marcar a página pronta para desenvolvimento no canto superior direito](/images/vscode-step1-4.png)
+    <img src={step1_4} alt="Vamos marcar a página pronta para desenvolvimento no canto superior direito" />
 </div>
 
 <TypographyP>Ao marcar, ela aparecerá dentro do VSCode na lista anteriormente vazia.</TypographyP>
 
 <div className="mt-6">
-![Componente aparecendo no VSCode](/images/vscode-step1-5.png)
+    <img src={step1_5} alt="Componente aparecendo no VSCode" />
 </div>
 
 <TypographyP>Abrindo o componente, temos uma espécie de "zoom" do arquivo do Figma por dentro do VSCode.</TypographyP>
 
 <div className="mt-6">
-![Visualização do componente](/images/vscode-step1-6.png)
+    <img src={step1_6} alt="Visualização do componente" />
 </div>
 
 <TypographyP>Vamos separar a programação do componente e o término <TypographyLink to="/Programando o componente">na próxima sessão</TypographyLink>.</TypographyP>

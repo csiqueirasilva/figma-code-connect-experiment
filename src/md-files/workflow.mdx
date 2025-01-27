@@ -6,34 +6,40 @@ import TypographyLink from '@/components/typography/TypographyLink';
 import CodeBlock from "@/components/CodeBlock";
 import Waitlist from "@/components/sds/Waitlist";
 
+import step1_2 from "@public/images/component-step1-2.png";
+import step1_3 from "@public/images/component-step1-3.png";
+import step1_4 from "@public/images/component-step1-4.png";
+import step1_5 from "@public/images/component-step1-5.png";
+import step1_6 from "@public/images/component-step1-6.png";
+
 <TypographyP>Continuando da sessão anterior, onde temos no VSCode o Figma aberto através da extensão, vamos selecionar os frames do Figma e obter os códigos para colar no VSCode. Iniciando do frame mais externo, vamos pegar regras CSS para colocar no wrapper.</TypographyP>
 
 <div className="mt-6">
-![Programando o wrapper](/images/component-step1-2.png)
+    <img src={step1_2} alt="Programando o wrapper" />
 </div>
 
 <TypographyP>Vamos agora obter o Header. Como ele é um componente linkado, é possível pegar o código React diretamente. Aparentemente não será necessário ajustes nos paddings, pois já estão encapsulados no Header programado no repositório do SDS anteriormente.</TypographyP>
 
 <div className="mt-6">
-![Programando o Header](/images/component-step1-3.png)
+    <img src={step1_3} alt="Programando o Header" />
 </div>
 
 <TypographyP>A próxima parte é uma composição de diversos componentes. Importando diretamente o código React se nota que faltam alguns espaçamentos. Esses são adicionados via style, seguindo exatamente como na imagem do Figma.</TypographyP>
 
 <div className="mt-6">
-![Programando o Header](/images/component-step1-4.png)
+    <img src={step1_4} alt="Programando a composição" />
 </div>
 
 <TypographyP>Adicionamos então o Footer. Esse componente parece ter discrepâncias do que veio do SDS e não será corrigido - um issue foi aberto no Github questionando isso; Porém, cabe o entendimento que poderíamos corrigir e a nossa base de componentes conectados ficaria correta. Essa situação pode ilustrar uma real necessidade de atualização em componentes ao longo do tempo.</TypographyP>
 
 <div className="mt-6">
-![Programando o Header](/images/component-step1-5.png)
+    <img src={step1_5} alt="Programando o footer" />
 </div>
 
 <TypographyP>Terminando, marcamos o componente como concluído (canto superior direito). Isso será refletido no arquivo do Figma. Haveriam outras modificações para serem feitas - como criar um estado para o input do e-mail e o comportamento da submissão do formulário - mas, para esse exemplo, estaremos dando como concluído da forma que está.</TypographyP>
 
 <div className="mt-6">
-![Programando o Header](/images/component-step1-6.png)
+    <img src={step1_6} alt="Concluindo o componente" />
 </div>
 
 <TypographyP>Abaixo, o resultado sendo executado. Note que há algumas funcionalidades que já vieram programadas do SDS, como responsividade.</TypographyP>

@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       '@': '/src',
+      '@public': '/public',
       'compositions': path.resolve(__dirname, 'node_modules/sds/src/ui/compositions'),
       'hooks': path.resolve(__dirname, 'node_modules/sds/src/ui/hooks'),
       'icons': path.resolve(__dirname, 'node_modules/sds/src/ui/icons'),

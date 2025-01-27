@@ -5,6 +5,16 @@ import { Separator } from '@/components/ui/separator';
 import TypographyLink from '@/components/typography/TypographyLink';
 import CodeBlock from "@/components/CodeBlock";
 
+import step1 from "@public/images/figma-sds-copy.png";
+import step2 from "@public/images/sds-step3-1.png";
+import step3 from "@public/images/sds-step3-2.png";
+import step4 from "@public/images/sds-step3-3.png";
+import step5 from "@public/images/sds-step4-1.png";
+import step6 from "@public/images/sds-step4-2.png";
+import step7 from "@public/images/sds-step4-3.png";
+
+<TypographyP>Exemplo do código conectado com a versão no Figma.</TypographyP>
+
 <TypographyP>As instruções abaixo foram retiradas do README do SDS. Serão feitas elas aqui com screenshots para facilitar o entendimento e reprodução.</TypographyP>
 
 <TypographyP>Os passos originais do repositório do SDS são:</TypographyP>
@@ -22,7 +32,7 @@ import CodeBlock from "@/components/CodeBlock";
 <TypographyP>Para o ```item 1```, simplesmente acessamos o <TypographyLink to="https://www.figma.com/community/file/1380235722331273046/simple-design-system" target='_blank'>link do arquivo de SDS no Figma</TypographyLink> e criamos uma cópia na nossa conta como na imagem abaixo.</TypographyP>
 
 <div className="mt-6">
-![Criar cópia do arquivo de design system do SDS](/images/figma-sds-copy.png)
+   <img src={step1} alt="Criar cópia do arquivo de design system do SDS" />
 </div>
 
 <SubtitleMd>Passo 2</SubtitleMd>
@@ -36,7 +46,7 @@ import CodeBlock from "@/components/CodeBlock";
 <TypographyP>Dentro do repositório SDS clonado, devemos substituir o ID do arquivo de Design System original pela cópia no arquivo **figma.config.json**. No exemplo, o original era **J0KLPKXiONDRssXD1AX9Oi** e foi sobreescrito por **HtE2Ja2xxQegkAIXrLQLGP** que é o ID da nossa cópia usada (abaixo demonstramos como obter essa informação).</TypographyP>
 
 <div className="mt-6">
-![Replace de J0KLPKXiONDRssXD1AX9Oi pelo id do seu arquivo cópia](/images/sds-step3-1.png)
+   <img src={step2} alt="Replace de J0KLPKXiONDRssXD1AX9Oi pelo id do seu arquivo cópia" />
 </div>
 
 <TypographyP>Para encontrar o ID do nosso Design System copiado, foram feitos os seguintes passos:</TypographyP>
@@ -44,13 +54,13 @@ import CodeBlock from "@/components/CodeBlock";
 <TypographyP>Encontrar o arquivo de design system no figma:</TypographyP>
 
 <div className="mt-6">
-![Encontrar o arquivo de design system no figma](/images/sds-step3-2.png)
+   <img src={step3} alt="Encontrar o arquivo de design system no figma" />
 </div>
 
 <TypographyP>Obter o ID pela URL:</TypographyP>
 
 <div className="mt-6">
-![Encontrar o arquivo de design system no figma](/images/sds-step3-3.png)
+   <img src={step4} alt="Obter o ID pela URL:" />
 </div>
 
 <TypographyP>*OBS: Existe um script no repositório do SDS que faz isso automaticamente, mas foi usado um replace simples.* </TypographyP>
@@ -62,19 +72,19 @@ import CodeBlock from "@/components/CodeBlock";
 <TypographyP>Essa chave deve ser gerada nas configurações de usuário:</TypographyP>
 
 <div className="mt-6">
-![Abrindo as configurações de usuário](/images/sds-step4-1.png)
+   <img src={step5} alt="Abrindo as configurações de usuário" />
 </div>
 
 <TypographyP>Indo na parte de segurança e clicando em generate new token:</TypographyP>
 
 <div className="mt-6">
-![Indo na parte de segurança e gerando o novo token](/images/sds-step4-2.png)
+   <img src={step6} alt="Indo na parte de segurança e gerando o novo token" />
 </div>
 
 <TypographyP>Deve ser marcada a opção da geração do token com permissão de escrita no code connect:</TypographyP>
 
 <div className="mt-6">
-![Marcar a opção da geração do token com permissão de escrita no code connect](/images/sds-step4-3.png)
+   <img src={step7} alt="Marcar a opção da geração do token com permissão de escrita no code connect" />
 </div>
 
 <SubtitleMd>Passo 5</SubtitleMd>
