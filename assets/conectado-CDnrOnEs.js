@@ -1,4 +1,4 @@
-import{j as o,L as t}from"./index-D9l3a8xl.js";import{T as c}from"./TypographyP-CXrMjbJ-.js";function s(n){const e={img:"img",p:"p",strong:"strong",...n.components};return o.jsxs(o.Fragment,{children:[o.jsx(c,{children:"Exemplo do código conectado com a versão no Figma."}),`
+import{j as o,L as t}from"./index-BqqSqeLG.js";import{T as c}from"./TypographyP-D2Im-44V.js";function s(n){const e={img:"img",p:"p",strong:"strong",...n.components};return o.jsxs(o.Fragment,{children:[o.jsx(c,{children:"Exemplo do código conectado com a versão no Figma."}),`
 `,o.jsx("div",{className:"mt-0",children:o.jsx(e.p,{children:o.jsx(e.img,{src:"/images/code-connected-1.png",alt:"Código Conectado"})})}),`
 `,o.jsx("div",{className:"mt-0",children:o.jsx(e.p,{children:o.jsx(e.img,{src:"/images/code-connected-2.png",alt:"Componente no Figma"})})}),`
 `,o.jsxs(c,{children:["Esse código na forma ",o.jsx(e.strong,{children:"básica"})," pode ser gerado a partir do Figma com a biblioteca de componentes. ",o.jsx(t,{to:"https://www.figma.com/code-connect-docs/react/",children:"Deve ser checada a documentação para ver como isso é feito"}),"."]}),`
