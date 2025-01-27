@@ -27,6 +27,10 @@ const NotebookRef = [
         "file": () => import("./md-files/workflow.mdx")
     },
     {
+        "title": "Biblioteca compartilhada no Figma",
+        "file": () => import("./md-files/sharedsystem.mdx")
+    },
+    {
         "title": "Conclusões",
         "file": () => import("./md-files/conclusao.mdx")
     },

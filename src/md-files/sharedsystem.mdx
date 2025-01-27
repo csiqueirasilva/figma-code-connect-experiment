@@ -1,0 +1,45 @@
+import TypographyP from '@/components/typography/TypographyP';
+import SubtitleMd from '@/components/typography/SubtitleMd';
+import InlineCode from '@/components/typography/TypographyInlineCode';
+import { Separator } from '@/components/ui/separator';
+import TypographyLink from '@/components/typography/TypographyLink';
+import CodeBlock from "@/components/CodeBlock";
+import Waitlist from "@/components/sds/Waitlist";
+
+import pic1 from "@public/images/shared-system1.jpeg";
+import pic2 from "@public/images/shared-system2.jpeg";
+import pic3 from "@public/images/shared-system3.jpeg";
+import pic4 from "@public/images/shared-system4.jpeg";
+import pic5 from "@public/images/shared-system5.jpeg";
+
+<TypographyP>Podemos compartilhar no Figma os componentes gerados em um arquivo de Design System para serem reutilizados em outros arquivos.</TypographyP>
+
+<TypographyP>Para alcançar esse objetivo, iniciamos publicando os componentes.</TypographyP>
+
+<div className="mt-0">
+    <img src={pic1} />
+</div>
+
+<TypographyP>Após isso, no arquivo que vamos construir o novo sistema usando os componentes, devemos importar a biblioteca publicada.</TypographyP>
+
+<div className="mt-0">
+    <img src={pic2} />
+</div>
+
+<TypographyP>Durante o uso, os componentes podem naturalmente sofrer atualizações. Essas atualizações são recebidas nos arquivos utilizando a biblioteca através de notificações. Nessas notificações, são listados os componentes utilizados que foram atualizados.</TypographyP>
+
+<div className="mt-0">
+    <img src={pic3} />
+</div>
+
+<TypographyP>Ao clicar na lista de componentes atualizados, podemos ver a versão atualmente usada do componente comparada a que está vindo na atualização - em outras palavras, um "antes e depois" do componente.</TypographyP>
+
+<div className="mt-0">
+    <img src={pic4} />
+</div>
+
+<TypographyP>Ao clicar para atualizar tudo, os componentes são atualizados onde foram utilizados.</TypographyP>
+
+<div className="mt-0">
+    <img src={pic5} />
+</div>
